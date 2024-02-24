@@ -1,0 +1,42 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-family: 'Poppins', sans-serif;
+  --acc1: rgb(194, 128, 210);
+  --acc2: rgb(67, 185, 126);
+  --bg: white;
+}
+
+
+
+body{
+  background: white;
+}
+
+
+
+li{
+  list-style: none;
+  
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.material-icons{
+  color: inherit;
+  font-size: inherit;
+}
+/* .material-icons {
+  font-family: 'Material Icons', sans-serif !important;
+  font-display: swap !important;
+  color: inherit;
+  font-size: inherit;
+} */
+.icon{
+  cursor: pointer;
+}

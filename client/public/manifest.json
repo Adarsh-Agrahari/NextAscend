@@ -1,0 +1,21 @@
+{
+  "short_name": "Move Forward",
+  "description": "Find relevant opportunities such as internships and fellowships. ",
+  "name": "Move Forward",
+  "icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "/icons/icon-196x196.png",
+			"sizes": "72x72 96x96 128x128 144x144 196x196",
+			"type": "image/png"
+		}
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f1f4f8",
+  "background_color": "#ffffff"
+}
