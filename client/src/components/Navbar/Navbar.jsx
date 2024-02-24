@@ -41,7 +41,7 @@ export default function Navbar({ user, logout }) {
       <div className="menu">
         <ul>
           <li className="nav-item">
-            <a href="https://github.com/Adarsh-Agrahari">
+            <a href="https://github.com/Adarsh-Agrahari/NextAscend">
               <i className="fa-brands fa-github"></i>
             </a>
           </li>
