@@ -14,7 +14,7 @@
 }
 .table{
 	background-color: #f1f4f8;
-	display: flex;
+	/* display: flex; */
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
