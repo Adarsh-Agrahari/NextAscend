@@ -4,8 +4,6 @@ import { Button, Avatar, Menu, MenuItem } from "@mui/material";
 import { logoutAuth } from "../../services/api";
 import { alert } from "../CustomAlert/alert";
 
-import "./Navbar.css";
-
 export default function Navbar({ user, logout }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const menuOpen = Boolean(anchorEl);
@@ -30,27 +28,27 @@ export default function Navbar({ user, logout }) {
   };
 
   return (
-    <div className="navBar">
+    <div className="flex justify-between items-center py-8 px-40 w-full">
       <NavLink to="/">
-        <div className="logoDiv">
-          <p>Next</p>
-          <h1>Ascend</h1>
+        <div className="flex flex-col items-start">
+          <p className="text-sm text-gray-600 font-semibold">Next</p>
+          <h1 className="text-black font-bold text-3xl leading-none">Ascend</h1>
         </div>
       </NavLink>
 
-      <div className="menu">
-        <ul>
-          <li className="nav-item">
+      <div className="flex items-center space-x-4">
+        <ul className="flex items-center space-x-4">
+          <div className="text-gray-600 text-3xl transition-colors duration-200 hover:text-blue-500">
             <a href="https://github.com/Adarsh-Agrahari/NextAscend">
               <i className="fa-brands fa-github"></i>
             </a>
-          </li>
+          </div>
 
-          <div className="nav-item">
+          <div className="flex items-center">
             {user ? (
               <>
                 <div
-                  className="item"
+                  className="cursor-pointer"
                   id="menu-button-2"
                   onClick={handleClick}
                   aria-controls={menuOpen ? "basic-menu" : undefined}
@@ -88,8 +86,21 @@ export default function Navbar({ user, logout }) {
               </>
             ) : (
               <NavLink to="/auth">
-                <div className="button">
-                  <span className="material-icons">login</span>
+                <div className="cursor-pointer text-gray-600 transition-colors duration-200 hover:text-blue-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-8"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
+                    />
+                  </svg>
                 </div>
               </NavLink>
             )}
