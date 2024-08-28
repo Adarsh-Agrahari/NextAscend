@@ -16,9 +16,23 @@ const Card = ({ item }) => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 font-bold hover:text-gray-900 hover:underline"
+            className="flex gap-2 text-blue-600 font-bold hover:text-gray-900 hover:underline"
           >
             {item.name}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+              />
+            </svg>
           </a>
           <div className="flex items-center">
             <svg
@@ -28,7 +42,9 @@ const Card = ({ item }) => {
               stroke-width="1.5"
               stroke="currentColor"
               className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
-                bookmarked ? "text-yellow-500" : "text-gray-400 hover:text-gray-600"
+                bookmarked
+                  ? "text-yellow-500"
+                  : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={toggleBookmark}
             >
