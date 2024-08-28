@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Searchbox from "../components/Searchbox/Searchbox";
 import Table from "../components/Table/Table";
-import "./Home.css";
 
 const Home = ({ user, login, logout }) => {
   const [superTags, setSuperTags] = useState([
@@ -30,7 +29,7 @@ const Home = ({ user, login, logout }) => {
     "Community",
     "AWS",
     "Finance",
-    "Leardership",
+    "Leadership",
     "Physics",
     "Underrepresented",
     "Volunteer",
@@ -43,7 +42,6 @@ const Home = ({ user, login, logout }) => {
   const [selectedTags, setSelectedTags] = useState([]);
 
   const handleTagSelect = (tag, isSuperTag) => {
-    // console.log("selecting tag:", tag);
     if (isSuperTag) {
       setSelectedSuperTags([...selectedSuperTags, tag]);
     } else {
@@ -52,17 +50,17 @@ const Home = ({ user, login, logout }) => {
   };
 
   const handleTagDeselect = (tag, isSuperTag) => {
-    // console.log("de-selecting tag:", tag);
     if (isSuperTag) {
       setSelectedSuperTags(selectedSuperTags.filter((t) => t !== tag));
     } else {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
     }
   };
+
   return (
-    <div className="home">
-      <div className="sec-0"></div>
-      <div className="sec-1">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start px-6 lg:px-[5%]">
+      <div className="hidden lg:block lg:w-[20%]"></div>
+      <div className="flex-grow lg:w-[60%]">
         <Searchbox
           tags={tags}
           superTags={superTags}
@@ -88,25 +86,23 @@ const Home = ({ user, login, logout }) => {
           login={login}
         />
       </div>
-      <div className="sec-2">
-        <div className="message">
-          <div className="title">
+      <div className="lg:w-[20%] lg:pl-0 flex flex-col items-center justify-start gap-5 mt-6 lg:mt-0">
+        <div className="w-full bg-blue-50 p-5 rounded-lg shadow-lg">
+          <div className="flex items-center gap-2 font-medium mb-2">
             <span className="material-icons">tips_and_updates</span>
             Tip
           </div>
-          <div className="text">
-            Bookmark opportunities to receive reminders about deadlines on your
-            email.
+          <div className="text-gray-700">
+            Bookmark opportunities to receive reminders about deadlines on your email.
           </div>
         </div>
-        <div className="message">
-          <div className="title">
+        <div className="w-full bg-blue-50 p-5 rounded-lg shadow-lg">
+          <div className="flex items-center gap-2 font-medium mb-2">
             <span className="material-icons">tips_and_updates</span>
             Tip
           </div>
-          <div className="text">
-            We'll send you emails about new opportunities. If you can't find
-            them, check your spam folder.
+          <div className="text-gray-700">
+            We'll send you emails about new opportunities. If you can't find them, check your spam folder.
           </div>
         </div>
       </div>
