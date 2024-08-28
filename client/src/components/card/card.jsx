@@ -37,13 +37,13 @@ const Card = ({ item }) => {
           <div className="flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              fill={bookmarked ? "yellow" : "none"}
+              fill={bookmarked ? "blue" : "none"}
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
               className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
                 bookmarked
-                  ? "text-yellow-500"
+                  ? "text-blue-500"
                   : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={toggleBookmark}
