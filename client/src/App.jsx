@@ -13,6 +13,9 @@ import { getUserData } from "./services/api";
 import { alert } from "./components/CustomAlert/alert";
 // import GoogleLogin from "./components/GoogleLogin";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("user")) || null
@@ -41,6 +44,7 @@ const App = () => {
 
   return (
     <GoogleOAuthProvider clientId="79486214026-37n8n96tjtv0h9o6a8dnabi857555n02.apps.googleusercontent.com">
+      <ToastContainer />
       <div className="App">
         <Router>
           <Navbar user={user} login={login} logout={logout} />

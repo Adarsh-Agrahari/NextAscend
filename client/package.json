@@ -45,6 +45,7 @@
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.9.0",
 		"react-router-dom": "^6.11.2",
+		"react-toastify": "^10.0.5",
 		"util": "^0.12.4",
 		"validator": "^13.7.0",
 		"xss-clean": "^0.1.1"

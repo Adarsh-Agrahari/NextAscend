@@ -1,10 +1,24 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
-const Card = ({ item }) => {
+const Card = ({ item, user }) => {
   const [bookmarked, setBookmarked] = useState(false);
 
   const toggleBookmark = () => {
-    setBookmarked(!bookmarked);
+    if (!user) {
+      toast.info("Sign in to bookmark opportunity", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      setBookmarked(!bookmarked);
+    }
   };
 
   return (
