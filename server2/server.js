@@ -42,6 +42,10 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB connection error:", err));
 
+app.get("/", (req, res) => {
+  res.json({ message: "Server is up and running!", status: "success" });
+  });
+
 app.get("/profile", (req, res) => {
   if (!req.user) {
     return res.status(401).json({ message: "Not authenticated" });
