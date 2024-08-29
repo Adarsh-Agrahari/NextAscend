@@ -15,6 +15,7 @@ import { alert } from "./components/CustomAlert/alert";
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignIn from "./pages/Auth/SignIn";
 
 const App = () => {
   const [user, setUser] = useState(
@@ -43,28 +44,34 @@ const App = () => {
   }, []);
 
   return (
-    <GoogleOAuthProvider clientId="79486214026-37n8n96tjtv0h9o6a8dnabi857555n02.apps.googleusercontent.com">
-      <ToastContainer />
-      <div className="App">
-        <Router>
-          <Navbar user={user} login={login} logout={logout} />
-          <Routes>
-            <Route
-              path="/"
-              element={<Home user={user} login={login} logout={logout} />}
-            />
-            <Route
-              path="/about"
-              element={<About user={user} login={login} logout={logout} />}
-            />
-            <Route
-              path="/auth"
-              element={<Auth user={user} login={login} logout={logout} />}
-            />
-          </Routes>
-          <Footer />
-        </Router>
-      </div>
+    <GoogleOAuthProvider clientId="191844904560-20s5cjeja6m6if788g2dt7a7uv9g86eh.apps.googleusercontent.com">
+    <><ToastContainer />
+    <div className="App">
+      <Router>
+        <Navbar user={user} login={login} logout={logout} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home user={user} login={login} logout={logout} />}
+          />
+          <Route
+            path="/about"
+            element={<About user={user} login={login} logout={logout} />}
+          />
+          <Route
+            path="/signin"
+            element={<SignIn />}
+          />
+          {/* <Route
+            path="/auth"
+            element={<Auth user={user} login={login} logout={logout} />}
+          /> */}
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
+    </>
+      
     </GoogleOAuthProvider>
   );
 };

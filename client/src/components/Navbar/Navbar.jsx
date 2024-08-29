@@ -85,7 +85,7 @@ export default function Navbar({ user, logout }) {
                 </Menu>
               </>
             ) : (
-              <NavLink to="/auth">
+              <NavLink to="/signin">
                 <div className="cursor-pointer text-gray-600 transition-colors duration-200 hover:text-blue-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
