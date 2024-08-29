@@ -38,7 +38,7 @@ app.use("/auth", require("./routes/authRoutes"));
 
 // MongoDB connection
 mongoose
-  .connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(keys.mongoURI, { useNewUrlParser: true })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB connection error:", err));
 
@@ -73,7 +73,7 @@ app.get('/api/opportunities', async (req, res) => {
 });
 
 app.use(cors({
-  origin: 'localhost:3000',
+  origin: process.env.CLIENT_URL,
   methods: ['GET', 'POST'],
   credentials: true
 }));
