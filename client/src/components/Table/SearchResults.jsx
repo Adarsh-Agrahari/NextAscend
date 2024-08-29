@@ -14,7 +14,7 @@ const SearchResults = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:5000/api/opportunities'); // Update with your API endpoint
+        const response = await fetch('http://localhost:5001/api/opportunities'); // Update with your API endpoint
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
