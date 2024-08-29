@@ -81,7 +81,7 @@ app.use(cors({
 
 
 // Start server
-const PORT = process.env.PORT || 5001; // Change to an available port
+const PORT = process.env.PORT || 5000; // Change to an available port
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
